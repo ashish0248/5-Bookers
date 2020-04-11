@@ -5,28 +5,29 @@
 		<div class="row">
   		<div class="col-md-3">
     		<h2>User info</h2>
-    			<img class="attachment user profile_image fallback" src="/assets/no_image-ede28af4bad96368ef41be1b4be1cffce0d9402540f75d17895e32cb0d2af5e6.jpg" alt="No image">
-    			<table class="table">
+            <%= attachment_image_tag @user, :profile_image,  size: "100x100", format: 'jpeg', fallback: "no_image.jpg"%>
+   
+          <table class="table">
       				<tbody>
       					<tr></tr> 
       					<tr>
-    	  					<th><%= @user.name</th>
-    	  					<th></th>
+    	  					<th>name</th>
+    	  					<th><%= @user.name %></th>
       					</tr>
-   						<tr>
+   		         <tr>
     	 					<th>introduction</th>
-    	 					<th><%= @user.introduction</th>
+    	 					<th><%= @user.introduction %></th>
      					</tr>
-					</tbody>
+					   </tbody>
 				</table>
-  				<a class="col-xs-12 btn btn-default glyphicon glyphicon-wrench edit_user_15051" href="/users/15051/edit"></a>
+  				<%= link_to '', edit_user_path(@user), class:"col-xs-12 btn btn-default glyphicon glyphicon-wrench edit_user_15051" %>
 
     		<h2>New book</h2>
    			<div class="field row">
     			<%= form_for(@book, url: books_path) do |f| %>
     				<label for="book_title">Title</label>
     				<%= f.text_field :title, class:"form-control", rows:"3", placeholder:"Title" %>
-    				<label for="book_title">Body</label>
+    				<label for="book_body">Body</label>
     				<%= f.text_area :body, class:"form-control", rows:"3", placeholder:"Opinion" %>
     				<%= f.submit "Create Book", class:"btn btn-lg btn-block btn-base-1 mt-20" %>
     			<% end %>
@@ -49,9 +50,9 @@
  	 				<% @books.each do |book| %>
       					<tr>
        						<td>
-       							<%= link_to book.user.name, book_path(book)  %>
+       							<%= attachment_image_tag @user, :profile_image,  size: "60x60", format: 'jpeg', fallback: "no_image.jpg"%>
        							</td>
-        					<td><%= book.title %></td>
+        					<td><%= link_to book.title, book_path(book)  %></td>
         					<td><%= book.body %></td>
       					</tr>
       				<% end %>

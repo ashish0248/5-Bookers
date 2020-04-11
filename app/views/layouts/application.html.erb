@@ -1,15 +1,48 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Bookers5</title>
     <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meshiterro</title>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,600,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+  </head> 
 
   <body>
+
+    <div class="header" id="header">
+      <nav class="navbar navbar-main navbar-shadow" role="navigation" id="slide-nav">
+        <div class="container">
+          <ul>
+              <% if user_signed_in? %>
+                <%= link_to "Home",  user_path(current_user.id)%>
+                <%= link_to 'User', users_path %>
+                  <%= link_to 'Books', books_path %>
+                <%= link_to "logout", destroy_user_session_path, method: :delete %>
+              <% else %>
+              <%= link_to "Home", root_path %>
+                <%= link_to 'about', books_path %>
+                <%= link_to "sign up", new_user_registration_path %>
+                <%= link_to "login", new_user_session_path %>
+              <% end %>
+          </ul>
+    </div>
+  
     <%= yield %>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-3 col-xs-offset-9">
+        <p>CopyRight Infratop.inc</p>
+      </div>
+    </div>
+  </div>
+</footer>
+    
   </body>
 </html>
