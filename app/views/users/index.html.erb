@@ -1,5 +1,4 @@
 
-<%= link_to  'log out', destroy_user_session_path , method: :delete%>
 <div class="body">
     <div class="container">
 		<div class="row">
@@ -47,13 +46,13 @@
 	    			</tr>
   				</thead>
  	 			<tbody>
- 	 				<% @users.each do |user| %>
+ 	 				<% @users.each do |users| %>
       					<tr>
        						<td>
-       						<%= attachment_image_tag @user, :profile_image,  size: "60x60", format: 'jpeg', fallback: "no_image.jpg"%>
+       						<%= attachment_image_tag users, :profile_image,  size: "60x60", format: 'jpeg', fallback: "no_image.jpg"%>
        							</td>
-        					<td> <%= user.name %></td>
-        					<td> <%= link_to 'Show', user_path(user) %></td>
+        					<td> <%= users.name %></td>
+        					<td> <%= link_to 'Show', user_path(users) %></td>
       					</tr>
       				<% end %>
  			 	</tbody>

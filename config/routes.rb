@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 	root 'books#top'
 	get 'home/about' => 'books#new'
 
-	resources :books, only: [:create, :index, :show, :edit, :update, :delete]
+	resources :books, only: [:create, :index, :show, :edit, :update, :destroy]
 	resources :users, only: [:index, :show, :edit, :update]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
