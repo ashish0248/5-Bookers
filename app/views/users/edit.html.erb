@@ -1,3 +1,17 @@
+<% if @user.errors.any? %>
+        <div class="alart-message">
+           <h3 class="alart-body"><%= pluralize(@user.errors.count, "error") %> prohibited this userinfo from being saved:</h3>
+          <ul>
+             <% @user.errors.full_messages.each do |message| %>
+                 <li><%= message %></li>
+             <% end %>
+          </ul>
+      <% end %>
+      </div>
+
+
+
+
 <div class="body">
     <div class="container">
     	<h2>User info</h2>
