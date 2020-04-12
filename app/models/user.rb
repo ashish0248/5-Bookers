@@ -3,7 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
 
 	validates :name,    length: { in: 2..20 }   
- 	 validates :introduction,    length: { in: 0..50 }   
+ 	validates :introduction,    length: { maximum: 50} 
 
 
 
