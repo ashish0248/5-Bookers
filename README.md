@@ -5,8 +5,7 @@
 長野県にある小さな洋菓子店『ながのCAKE』の商品を通販するためのECサイトです
  
 # DEMO
- ![suteru_fav](https://i0.wp.com/kameiautoapprove.sakura.ne.jp/wp/wp-content/uploads/2018/08/okasi.png?w=490)
- ![suteru_fav](/Users/hajime/Desktop/work/vagrant/first-month/Bookers-5/app/assets/images/no_image.jpg)
+ ![suteru_fav](http://54.95.93.152/attachments/2fafe20ae2b159980aaadb15a36c578f38156aef/store/fill/150/150/33b41d55d889ff89897b0bf6dd17c0d27de3096794fbf91b90be9163ba02/item_image)
 # Features
  
 "hoge"のセールスポイントや差別化などを説明する
