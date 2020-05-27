@@ -57,4 +57,4 @@ python demo.py
 社内向けなら社外秘であることを明示してる
  
 "hoge" is Confidential.
-
+/Users/hajime/Desktop/work/vagrant/first-month/Bookers-5/app/assets/images/no_image.jpg
