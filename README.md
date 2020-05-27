@@ -6,7 +6,6 @@
  
 # DEMO
  ![suteru_fav](https://i0.wp.com/kameiautoapprove.sakura.ne.jp/wp/wp-content/uploads/2018/08/okasi.png?w=490)
- ![suteru_fav](/Users/hajime/Desktop/スクリーンショット 2020-05-27 15.01.26.png)
  
 # Features
  
